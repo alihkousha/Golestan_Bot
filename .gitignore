@@ -1,0 +1,7 @@
+/.vscode
+/__pycache__
+/.ipynb_checkpoints
+/Golestan_Crawler_iust.py
+*.json
+/source.txt
+/Untitled.ipynb
