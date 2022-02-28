@@ -61,8 +61,8 @@ class Golestan_Crawler(webdriver.Chrome):
                  options = None, service_args=None,
                  desired_capabilities=None, service_log_path=DEFAULT_SERVICE_LOG_PATH,
                  chrome_options=None, service = None, keep_alive=DEFAULT_KEEP_ALIVE)
-        self.user = "99316613"
-        self.password = "0150062532"
+        self.user = os.environ.get("id")
+        self.password = os.environ.get("pass")
         self.xpaths = {
             'user' : '/html/body/div/table[2]/tbody/tr[2]/td[2]/input',
             'password' : '/html/body/div/table[2]/tbody/tr[3]/td[2]/input',
@@ -306,8 +306,6 @@ class RegistrationClass(Golestan_Crawler):
 if __name__ == "__main__":
     #crawler = Golestan_Crawler("chromedriver.exe")
     #crawler.Threading_Crawler()
-    id_1 = os.environ.get("id")
-    print(id_1)
     """df = Data_Handler.DataFrame_Build()
     it = []
     for i in list(df['Lesson-Code']):
