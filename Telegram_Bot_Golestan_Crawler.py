@@ -1,7 +1,9 @@
 from telegram import KeyboardButton, ReplyKeyboardMarkup, Update
 from telegram.ext import (Updater, CommandHandler, ConversationHandler, MessageHandler, Filters, CallbackContext)
 from Golestan_Crawler import Golestan_Crawler as GC
+import os
 
+TOKEN = os.environ.get("TOKEN")
 class Golestan_Bot:
 
     def __init__(self) -> None:
@@ -17,6 +19,6 @@ class Golestan_Bot:
 
 if __name__ == "__main__":
     Bot = Golestan_Bot()
-    updater = Updater('5160281097:AAH2HzueXkeb8O-OxcwBRI_g3cyRSJkJfJ4')
+    updater = Updater(TOKEN)
     updater.dispatcher.add_handler(CommandHandler("start", Bot.start_handler))
     updater.start_polling()
