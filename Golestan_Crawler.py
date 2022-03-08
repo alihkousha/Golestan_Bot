@@ -264,7 +264,7 @@ class Golestan_Crawler(webdriver.Chrome):
         TOKEN = os.environ.get("TOKEN")
         O_DataFrame = self.Old_DataFrame
         N_DataFrame = self.New_DataFrame
-        Bot = telegram.Bot(token=)
+        Bot = telegram.Bot(token=TOKEN)
         self.report = Data_Handler.reporter(N_DataFrame,O_DataFrame)
         if self.report == []:
             winsound.Beep(freq, duration)
